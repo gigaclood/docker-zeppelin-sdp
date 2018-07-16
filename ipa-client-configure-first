@@ -27,7 +27,9 @@ function usage () {
 }
 
 function stop_running () {
+	echo "try to stopping...."
 	systemctl stop-running
+	echo "stopped"
 }
 trap stop_running TERM
 
