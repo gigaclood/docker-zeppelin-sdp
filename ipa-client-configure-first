@@ -31,7 +31,7 @@ function stop_running () {
 	systemctl stop-running
 	echo "stopped"
 }
-trap stop_running TERM
+trap stop_running SIGTERM
 
 systemctl stop dbus.service
 rm -rf /var/run/*.pid
